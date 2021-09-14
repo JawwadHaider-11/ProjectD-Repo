@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Main Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<style>
+.mySlides
+{
+	display: none;
+}
+</style>
+
+</head>
+<body>
+	<div class="topsection">
+		<div class="images">
+			<img class="mySlides" src="j1.jpg">
+			<img class="mySlides" src="j2.jpg">
+			<img class="mySlides" src="j3.jpg">
+			<img class="mySlides" src="j4.jpg">
+			<img class="mySlides" src="j5.jpg">
+			<img class="mySlides" src="j6.jpg">
+			 <!-- style="width: 100%; display: none;"			 -->
+		</div> 
+	</div> 
+	<div class="middlesection">
+		
+	</div>
+	<div class="bottomsection">
+		
+	</div>
+
+<script>
+	console.log("INSIDE");
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+	console.log("INSIDE @");
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  console.log("x: ",x);
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+    console.log("i: ",i);
+  }
+  slideIndex++;
+  console.log("slideIndex: ",slideIndex);
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html>
